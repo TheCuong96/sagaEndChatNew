@@ -1,0 +1,181 @@
+.conversation {
+    &__files {
+        padding: 24px 25px 35px 35px;
+        .layout-2 {
+            .conversation__files--item {
+                width: 98%;
+            }
+        }
+        .layout-3 {
+            .conversation__files--item {
+                width: 48%;
+                &:first-child {
+                    width: 98%;
+                }
+            }
+        }
+        .layout-4 {
+            .conversation__files--item {
+                width: 32%;
+                &:first-child {
+                    width: 98%;
+                }
+            }
+        }
+        .layout-many {
+        }
+
+        &--wrap {
+        }
+        &--list {
+            @include flexbox;
+            @include flex-wrap(wrap);
+            @include scrollbarSquare;
+            width: calc(100% + 2%);
+            margin-bottom: 20px;
+            overflow-y: auto;
+            max-height: 350px;
+        }
+        &--item {
+            position: relative;
+            margin-bottom: 4px;
+            margin-right: 1%;
+            img {
+                width: 100%;
+            }
+            &.image {
+            }
+            &.video {
+            }
+            &.file {
+                @include flexbox;
+                @include align-items(center);
+                width: 100%;
+                margin-bottom: 7px;
+                .icon {
+                    max-width: 26px;
+                    width: 100%;
+                    margin-right: 10px;
+                }
+                .name {
+                    @include flexbox;
+                    @include flex-direction(column);
+                    line-height: normal;
+                }
+                .link {
+                    @include fw-medium;
+                    color: #ffffff;
+                    color: inherit;
+                    margin-bottom: 2px;
+                }
+                .size {
+                    font-size: 14px;
+                    color: #8b8b8b;
+                }
+            }
+        }
+        &--item--many {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+        &--input {
+            .add-new {
+                font-size: 14px;
+                color: #2fa2db;
+                text-decoration: underline;
+                position: relative;
+                cursor: pointer;
+                overflow: hidden;
+                display: inline-block;
+                margin-left: auto;
+                &:hover {
+                    text-decoration: none;
+                }
+                input[type="file"] {
+                    opacity: 0;
+                    visibility: hidden;
+                    position: absolute;
+                    z-index: 1;
+                    height: auto;
+                    width: 100%;
+                    display: inline;
+                }
+            }
+            .label {
+                position: relative;
+                z-index: 2;
+            }
+            .icon {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                padding: 0;
+                z-index: 1;
+                cursor: pointer;
+                @include transform(translateY(-50%));
+            }
+        }
+        &--emoji-wrap {
+            position: relative;
+        }
+        .actions {
+            @include flexbox;
+            border-radius: 2px;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 4px 6px;
+            position: absolute;
+            right: 8px;
+            top: 8px;
+            &--icon {
+                font-size: 18px;
+                color: #ffffff;
+                margin: 0 2px;
+                cursor: pointer;
+            }
+            &--edit {
+            }
+            &--del {
+            }
+            &--play {
+                @include flex_center;
+                @include transform(translate(-50%, -50%));
+                font-size: 18px;
+                color: #ffffff;
+                border-radius: 50%;
+                width: 14.85%;
+                min-width: 40px;
+                background-color: rgba(0, 0, 0, 0.4);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                cursor: pointer;
+                &::after {
+                    display: block;
+                    content: "";
+                    padding-top: 100%;
+                }
+            }
+        }
+    }
+
+    &__deletePerson {
+        &--wrap {
+            margin-top: 20px;
+        }
+        &--icon {
+            max-width: 150px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            img {
+                width: 100%;
+            }
+        }
+        &--label {
+            font-size: 18px;
+            text-align: center;
+            color: #ffffff;
+        }
+    }
+}

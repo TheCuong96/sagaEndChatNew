@@ -1,0 +1,28 @@
+.ant-form-item {
+    margin-bottom: 0 !important;
+}
+.ant-picker {
+    height: 100%;
+}
+
+.ant-picker-suffix {
+    color: #fff;
+}
+.custom_select { 
+    width: 100%;
+    .ant-input {
+        font-size: 16px;
+        height: 40px;
+        box-shadow: none;
+        border-radius: 3px;
+        border: 1px solid #d2d2d2;
+    }
+    .ant-select.ant-select-single.ant-select-show-arrow {
+        font-size: 16px;
+        height: 40px;
+        box-shadow: none;
+        border-radius: 3px;
+        border: 1px solid #d2d2d2;
+    }
+   
+}

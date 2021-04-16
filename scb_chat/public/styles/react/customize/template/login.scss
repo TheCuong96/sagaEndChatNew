@@ -1,0 +1,8 @@
+.t_login{
+    .form-group .form-control {
+        background: transparent!important;
+    }
+    input:-webkit-autofill{
+        -webkit-box-shadow: 0 0 0 50px white inset!important;
+    }
+}

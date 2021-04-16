@@ -1,0 +1,47 @@
+.custom-switch {
+    &.active {
+
+        .custom-control-input:checked,
+        .custom-control-label::after {
+            @include transform(translateX(.75rem));
+            background-color: #18d26b;
+            box-shadow: none;
+            outline: none;
+
+        }
+
+        .custom-control-input:checked,
+        .custom-control-label {
+            color: #18d26b;
+        }
+
+        .custom-control-input:checked,
+        .custom-control-label::before {
+            box-shadow: none;
+            outline: none;
+            border-color: #18d26b;
+            background-color: #ffffff;
+
+        }
+    }
+
+    .custom-control-label {
+        color: #ff3f3f;
+        cursor: pointer;
+
+        &::before {
+            border: 1px solid #ff3f3f;
+            box-shadow: none;
+            outline: none;
+        }
+
+        &::after {
+            background-color: #ff3f3f;
+        }
+
+    }
+
+
+
+
+}

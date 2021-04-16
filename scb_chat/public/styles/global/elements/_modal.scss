@@ -1,0 +1,131 @@
+// modal
+.cus-modal {
+    &.no-radius {
+        .modal-content {
+            border-radius: 0;
+        }
+    }
+
+    .modal-content {
+        border: none;
+    }
+
+    .modal-header {
+        @include flexbox;
+        @include justify-content(space-between);
+        @include align-items(center);
+        box-shadow: 0 1px 4px 0 rgba(0, 128, 255, 0.18);
+        border-bottom: 1px solid rgba(0, 128, 255, 0.25);
+        border-radius: 0;
+        padding-top: 8px;
+        padding-bottom: 8px;
+
+    }
+
+    .add-input {
+        @include fw-normal;
+        float: right;
+        font-size: 14px;
+        color: #0080ff;
+        cursor: pointer;
+    }
+
+    .close {
+        color: #ff3f3f;
+        opacity: 1;
+        font-size: 18px;
+        margin: 0;
+        padding: 0;
+        text-shadow: none;
+        float: none;
+
+        &:active,
+        &:hover {
+            outline: none;
+        }
+    }
+
+    .modal-title {
+        @include fw-medium;
+        font-size: 20px;
+        color: #304460;
+    }
+
+    .modal-footer {
+        @include justify-content(center);
+        border: none;
+        padding-bottom: 30px;
+    }
+
+    .modal .modal-dialog {
+        @include transform(translate(-50%, -50%));
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 420px;
+        width: 100%;
+        padding-right: 15px;
+
+        @media (max-width: 555px) {
+            min-width: unset;
+        }
+    }
+
+    .modal-body {
+        @include flexbox;
+        @include justify-content(center);
+        padding-bottom: 5px;
+
+        .input-icon {
+            color: #0080ff;
+            font-size: 16px;
+        }
+    }
+
+    .modal-img {
+        max-width: 132px;
+        width: 100%;
+        max-height: 132px;
+        height: 100%;
+    }
+
+    label {
+        @include fw-normal;
+        font-size: 14px;
+        color: #666b77;
+    }
+
+    .modal-note {
+        @include fw-normal;
+        font-size: 18px;
+        padding-top: 20px;
+        color: #666b77;
+    }
+
+    .btn {
+        max-height: 36px;
+        height: 100%;
+        min-width: 110px;
+        padding: 5px 8px;
+        margin-left: 10px;
+    }
+
+    .input-question {
+        .form-control {
+            height: 41px;
+        }
+    }
+}
+
+.confirm {
+    .modal-body {
+        display: unset;
+        text-align: center;
+    }
+
+    .modal-dialog {
+        max-width: 400px;
+        min-width: unset !important;
+        width: 100%;
+    }
+}

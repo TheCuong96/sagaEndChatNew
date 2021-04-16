@@ -1,0 +1,41 @@
+.loading_full {
+    width: 100%;
+    height: 100%;
+    // background-color: #00000082;
+    z-index: 99999999;
+    position: fixed;
+    @include flex_center;
+    @include flex-direction(column);
+
+    .ant-spin-dot-item {
+        background-color: #fff;
+        width: 20px;
+        height: 20px;
+    }
+
+    .ant-spin-text {
+        color: #fff;
+        margin-top: 15px;
+        font-size: 20px;
+    }
+
+    .ant-spin-dot {
+        width: 2em;
+        height: 2em;
+    }
+}
+
+.mainPage {
+    .loading_full {
+        position: absolute;
+        // background-color: #646568a6;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+    }
+}
+.ant-spin-nested-loading > div > .ant-spin{
+    max-height: 100% !important;
+   top: 50%;
+   left: 50%;
+}

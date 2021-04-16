@@ -1,0 +1,19 @@
+{
+    "presets": [
+        "@babel/preset-env", //Giúp babel chuyển đổi code ES6, ES7 và ES8 thành ES5.
+        "@babel/preset-react" //Giúp chuyển đổi JSX sang mã Javascript.
+    ],
+    "plugins": [
+        "react-html-attrs",
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-transform-runtime", // Tối ưu hoá path khi import. example: '../component/input' to 'component/input'
+        [
+            "module-resolver",
+            {
+                "root": [
+                    "./src"
+                ]
+            }
+        ]
+    ]
+}

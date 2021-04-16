@@ -1,0 +1,91 @@
+.chatbot {
+    tbody tr {
+        &:hover,
+        &.active {
+            background-color: transparent;
+            // .switch-input {
+            //     background-color: #f5f6f6;
+            //     border-color: #f5f6f6;
+            // }
+        }
+    }
+    &__crud {
+        @include flexbox;
+        .btn-icon {
+            background: rgba(0, 128, 255, 0.1);
+            color: #0080ff;
+            padding: 7px 10px;
+            border-radius: 3px;
+            height: fit-content;
+            margin: 9px 17px 0 0;
+            &.active {
+                background: #0080ff;
+                color: #ffffff;
+            }
+        }
+    }
+    &__box {
+        flex-grow: 1;
+        padding-right: 60px;
+    }
+    &__content {
+        @include flexbox;
+        @include justify-content(space-between);
+        padding: 13px 0;
+        border-bottom: solid 1px #ececec;
+        textarea {
+            max-height: 120px;
+        }
+        .list-icon {
+            @include flexbox;
+            @include align-items(center);
+            .icon {
+                font-size: 18px;
+                margin-left: 21px;
+                display: none;
+                cursor: pointer;
+                &.active {
+                    display: inline;
+                }
+            }
+            .icon-add,.icon-add-new {
+                color: #18d26b;
+            }
+            .icon-del,.icon-cancel,.icon-no-add {
+                color: #ff3f3f;
+            }
+            .icon-edit {
+                color: #0080ff;
+            }
+        }
+        &:last-child {
+            border-bottom: none;
+        }
+        .switch-input {
+            width: 100%;
+            color: #666b77;
+            border-radius: 3px;
+            border: solid 1px #0080ff;
+            resize: none;
+            &.active {
+                padding: 7px 12px;
+            }
+            &:read-only {
+                border: solid 1px #ffffff;
+            }
+            &:focus {
+                // height: 36px;
+                // border-radius: 3px;
+                // border: solid 1px #0080ff;
+                // outline: unset;
+
+                outline: none;
+            }
+        }
+    }
+
+    td {
+        vertical-align: text-top;
+        padding: 0 3px;
+    }
+}

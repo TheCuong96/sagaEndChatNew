@@ -1,0 +1,43 @@
+.recording {
+    .switch-custom {
+        margin-left: 9px;
+    }
+    .form-check {
+        padding-left: 0;
+    }
+    &__label {
+        @include flexbox;
+        @include align-items(center);
+    }
+    &__checkbox {
+        color: #fff;
+
+        .ant-checkbox {
+            border-radius: 2px;
+            border: none;
+            font-size: 16px;
+            .ant-checkbox-input {
+                outline: none;
+            }
+            .ant-checkbox-inner {
+                background-color: transparent;
+                border: none;
+                width: 17px;
+                height: 17px;
+                border: solid 1px #707070;
+                &::after {
+                    position: absolute;
+                    top: 45%;
+                    left: 30%;
+                }
+            }
+            &.ant-checkbox-checked {
+                .ant-checkbox-inner {
+                    background-color: #f4a239;
+                    border-radius: 0;
+                    border: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,260 @@
+.sidebar {
+    // @include transform(translateY(-60px));
+    // @include transition(all 0.3s ease);
+    width: 245px;
+    background-image: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0.75) 48%, rgba(255, 255, 255, 0));
+    color: #fff;
+    height: 100%;
+    z-index: 10;
+    // background-position: center;
+    background-repeat: no-repeat;
+    margin-left: -2px;
+    @media(max-width: 1200px) {
+        position: absolute;
+        top: 0px;
+        height: calc(100% - 60px);
+        left: 0 !important;
+    }
+    @media(max-width: 768px) {
+        top: 60px;
+       
+    }
+    &.hide {
+        @include transform(translateX(-245px));
+        position: absolute;
+        overflow: hidden;
+    }
+
+    &__toggle_icon {
+        cursor: pointer;
+
+        &.active {
+            span {
+                &:last-child {
+                    width: 100%;
+                }
+            }
+        }
+
+        span {
+            @include transition(.2s ease-in-out);
+            display: block;
+            position: relative;
+            padding: 3px 0;
+            width: 20px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                background-color: #304460;
+                width: 100%;
+                height: 2px;
+            }
+
+            &:last-child {
+                width: 50%;
+            }
+
+            &:first-child {
+                width: 50%;
+            }
+        }
+
+        &:hover {
+            span {
+                &:last-child {
+                    width: 100%;
+                }
+
+                &:first-child {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .nav {
+        margin: 15px 0 15px 0;
+        padding-bottom: 10px;
+        .nav-link {
+            font-weight: 500;
+            color: #304460;
+            @include flexbox;
+
+            .text {
+                margin-left: 15px;
+            }
+
+            .icon {
+                font-size: 19px;
+                color: #304460;
+                min-width: 25px;
+            }
+
+            .number {
+                margin-left: auto;
+                color: #0080ff;
+                border: 1px solid #0080ff;
+                border-radius: 50%;
+                width: 22px;
+                height: 22px;
+                font-size: 14px;
+                text-align: center;
+                position: relative;
+            }
+
+            .over {
+                font-size: 10px;
+                padding-top: 3px;
+                padding-right: 4px;
+
+                &::after {
+                    content: '+';
+                    position: absolute;
+                    right: 3px;
+                    top: -2px;
+                }
+            }
+            &:hover{
+                 color: white!important;
+            background-color: #0080ff ;
+                .icon {
+                    color: white !important;
+                }
+
+                .icon_svg_menu {    
+                    .color_main {
+                        fill: white;
+                    }
+                }
+            }
+            
+         
+        }
+        .active{
+            color: white!important;
+            background-color: #0080ff ;
+                .icon {
+                    color: white !important;
+                }
+
+                .icon_svg_menu {    
+                    .color_main {
+                        fill: white;
+                    }
+                }
+        }
+
+        .nav-icon {
+            position: relative;
+        }
+
+        .icon_lock {
+            @include flex_center;
+            position: absolute;
+            right: -4px;
+            bottom: -3px;
+            font-size: 11px;
+            color: #ff3d3d;
+            width: 17px;
+            height: 17px;
+            background-color: #23262d;
+            border-radius: 50%;
+
+        }
+    }
+
+    &__wrap {
+        @include flexbox;
+        @include flex-direction(column);
+        @include justify-content(space-between);
+        @include box-shadow(0 1px 2px 0 rgba(0, 0, 0, 0.1));
+        position: relative;
+        top: 0;
+        height: calc(100vh - 60px);
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding-bottom: 10px;
+    }
+
+    &__logo {
+        @include flex-inline;
+        @include align-items(center);
+        @include justify-content(space-between);
+        @include transition(all 0.3s ease);
+        width: 245px;
+        height: 60px;
+        padding: 15px;
+        border: solid 1px #ececec;
+        position: relative;
+
+        &.hide {
+            @include transform(translateX(-245px));
+
+            .sidebar__toggle_icon {
+
+                position: absolute;
+                right: -42px;
+            }
+        }
+
+        img {
+            width: 100%;
+            // display: none;
+        }
+
+        .link {
+            max-width: 140px;
+            display: block;
+        }
+    }
+
+    &__sticky {
+        @include scrollbar;
+        height: calc(100% - 115px);
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    &__item {
+        margin-top: 20px;
+        position: relative;
+
+        &.has_delete,
+        &.has_checkbox {
+            .sidebar__heading {
+                @include flexbox;
+                @include align-items(center)
+            }
+
+            .nav-link {
+                @include flexbox;
+                @include align-items(center)
+            }
+        }
+
+        &.has_dropdown {
+            &:hover {
+                .sidebar__heading {
+                    color: #f4a239;
+                    cursor: pointer;
+
+                    &:before {
+                        color: #f4a239;
+                    }
+                }
+            }
+        }
+    }
+
+    &__footer {
+        @include flex_center;
+        @include flex-direction(column);
+        padding: 15px 15px 20px 15px;
+
+        .copyright {
+            font-size: 12px;
+            color: #666b77;
+        }
+    }
+}

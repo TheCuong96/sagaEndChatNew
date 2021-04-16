@@ -1,0 +1,130 @@
+//btn
+$btn_transition: 250ms all ease-in-out;
+
+$btn-blue-bg: #0080ff;
+$btn-blue-text: #ffffff;
+
+
+$btn-white-bg: #ffffff;
+$btn-white-text: #304460;
+
+.btn {
+    @include fw-normal;
+    @include flexbox;
+    @include align-items(center);
+    border-radius: 3px;
+    outline: none;
+    display: inline-block;
+    height: 36px;
+    min-width: 110px;
+
+    @media (max-width: 480px) {
+        padding: 7px 10px 4px 10px;
+    }
+
+    &:focus {
+        box-shadow: unset;
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.btn-white {
+    background-color: $btn-white-bg;
+    color: $btn-white-text;
+
+    &:hover {
+        background-color: $btn-white-bg;
+        color: $btn-white-text;
+        border: 1px solid #d2d2d2;
+    }
+}
+
+.btn-white-outline {
+    background-color: $btn-white-bg;
+    color: $btn-white-text;
+    border: 1px solid #d2d2d2;
+
+    &:hover {
+        background-color: $btn-blue-bg;
+        color: $btn-blue-text;
+    }
+}
+
+.btn-red {
+    background-color: #e54a4a;
+    color: #fff;
+    border: solid 1px #e54a4a;
+
+    &:hover {
+        background-color: #c71c1c;
+        border-color: #c71c1c;
+        color: #fff;
+    }
+}
+
+.btn-red-bd-none {
+    border: none;
+    background-color: #ffffff;
+    color: #ff3f3f;
+
+    &:hover {
+        background-color: #e94c4c;
+        border-color: #e94c4c;
+        color: #fff;
+    }
+}
+
+.btn-red-outline {
+    border: 1px solid #ff3f3f;
+    background-color: #ffffff;
+    color: #ff3d3d;
+
+    &:hover {
+        background-color: #e94c4c;
+        border-color: #e94c4c;
+        color: #fff;
+    }
+}
+
+.btn-blue {
+    border: solid 1px $btn-blue-bg;
+    background-color: $btn-blue-bg;
+    color: $btn-blue-text;
+
+    &:hover {
+        color: #fff;
+        border: solid 1px #406add;
+        background-color: #406add;
+    }
+}
+
+.btn-blue-outline {
+    border: solid 1px $btn-blue-bg;
+    background-color: #f2f5fa;
+    color: $btn-blue-bg;
+
+    &:hover {
+        color: #fff;
+        border: solid 1px #406add;
+        background-color: #406add;
+    }
+}
+
+.btn-light-blue {
+    background-color: rgba(0, 128, 255, 0.1);
+    color: $btn-blue-bg;
+
+    &:hover {
+        color: #fff;
+        border: solid 1px #406add;
+        background-color: #406add;
+    }
+}
+
+.btn-icon {
+    font-size: 16 px;
+    margin-right: 5px;
+}

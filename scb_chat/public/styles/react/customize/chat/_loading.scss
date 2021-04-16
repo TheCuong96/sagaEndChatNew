@@ -1,0 +1,15 @@
+.loading_more {
+    display: grid;
+    padding: 10px;
+    .ant-spin-dot-item {
+        background-color: #fff;
+    }
+}
+.let_menu{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    text-align: center;
+    padding: 10px;
+}

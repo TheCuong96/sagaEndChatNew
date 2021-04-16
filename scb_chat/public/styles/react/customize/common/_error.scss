@@ -1,0 +1,93 @@
+.error404Page {
+    .image {
+        max-width: 65%;
+        margin: 0 auto;
+    }
+}
+
+.errorPage {
+    .card-header {
+        min-height: 70vh;
+        color: #fff;
+        @include flex_center;
+        @include flex-direction(column);
+
+        .error-code,
+        .error-text {
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .error-icon {
+            font-size: 120px;
+            color: #f4a239;
+            height: 140px;
+            animation: error 1.2s infinite;
+            @include transition(all 0.3s ease);
+            @include flexbox;
+            @include align-items(flex-start);
+        }
+    }
+}
+
+/**
+ * ==============================================
+ * Dot Pulse
+ * ==============================================
+ */
+
+.dot-typing {
+    position: relative;
+    left: -9999px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #f4a239;
+    color: #f4a239;
+    box-shadow: 9984px 0 0 0 #f4a239, 9999px 0 0 0 #f4a239, 10014px 0 0 0 #f4a239;
+    animation: dotTyping 1.5s infinite linear;
+}
+
+@keyframes dotTyping {
+    0% {
+        box-shadow: 9984px 0 0 0 #f4a239, 9999px 0 0 0 #f4a239, 10014px 0 0 0 #f4a239;
+    }
+
+    16.667% {
+        box-shadow: 9984px -10px 0 0 #f4a239, 9999px 0 0 0 #f4a239, 10014px 0 0 0 #f4a239;
+    }
+
+    33.333% {
+        box-shadow: 9984px 0 0 0 #f4a239, 9999px 0 0 0 #f4a239, 10014px 0 0 0 #f4a239;
+    }
+
+    50% {
+        box-shadow: 9984px 0 0 0 #f4a239, 9999px -10px 0 0 #f4a239, 10014px 0 0 0 #f4a239;
+    }
+
+    66.667% {
+        box-shadow: 9984px 0 0 0 #f4a239, 9999px 0 0 0 #f4a239, 10014px 0 0 0 #f4a239;
+    }
+
+    83.333% {
+        box-shadow: 9984px 0 0 0 #f4a239, 9999px 0 0 0 #f4a239, 10014px -10px 0 0 #f4a239;
+    }
+
+    100% {
+        box-shadow: 9984px 0 0 0 #f4a239, 9999px 0 0 0 #f4a239, 10014px 0 0 0 #f4a239;
+    }
+}
+
+@keyframes error {
+    0% {
+        @include align-items(flex-start);
+    }
+
+    50% {
+        @include align-items(flex-end);
+    }
+
+    100% {
+        @include align-items(flex-start);
+    }
+}

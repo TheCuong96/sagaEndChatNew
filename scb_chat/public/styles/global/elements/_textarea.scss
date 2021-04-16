@@ -1,0 +1,49 @@
+.cus-textarea {
+    .form-control {
+        box-shadow: none;
+        border: 1px solid #d2d2d2;
+        background-color: #fff;
+        border-radius: 3px;
+
+        @mixin placeholderInputStyles {
+            @include fw-light;
+            font-size: 16px;
+            color: #8b8b8b;
+        }
+
+        &::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            @include placeholderInputStyles;
+        }
+
+        &::-moz-placeholder {
+            /* Firefox 19+ */
+            @include placeholderInputStyles;
+        }
+
+        &:-ms-input-placeholder {
+            /* IE 10+ */
+            @include placeholderInputStyles;
+        }
+
+        &:-moz-placeholder {
+            /* Firefox 18- */
+            @include placeholderInputStyles;
+        }
+    }
+
+    textarea {
+        @include scrollbar;
+        border: 1px solid #d2d2d2;
+        outline: none;
+        background-color: #fff;
+        width: 100%;
+        color: #304460;
+        min-height: 30px;
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+}

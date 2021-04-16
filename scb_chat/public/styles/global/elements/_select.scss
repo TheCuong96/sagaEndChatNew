@@ -1,0 +1,194 @@
+.cus-select {
+    .label {
+        @include fw-normal;
+        font-size: 14px;
+        color: #666b77;
+    }
+
+    .form-control {
+        @include box-shadow(none);
+        @include fw-normal;
+        border: 1px solid #d2d2d2;
+        color: #304460;
+        border-radius: 3px;
+        font-size: 16px;
+        color: #304460;
+        padding: 0 7px 0 7px;
+        height: 40px;
+
+        &:hover,
+        &:active {
+            border: 1px solid #0080ff;
+        }
+
+        &:disabled {
+            background-color: #f5f6f6;
+        }
+
+        option {
+            @include box-shadow(0 2px 6px 0 rgba(0, 0, 0, 0.2));
+            color: #304460;
+            border: none;
+
+            &:hover,
+            &:active {
+                background-color: #ffffff !important;
+                color: #0080ff;
+            }
+        }
+    }
+}
+
+.select_box {
+    @include flexbox;
+    @include align-items(center);
+    @include fw-light;
+    border-radius: 3px;
+    background: #23262d;
+    position: relative;
+    height: 36px;
+    width: 100%;
+
+    .icon_select {
+        position: absolute;
+        right: 0;
+        font-size: 11px;
+        padding-right: 12px;
+        color: #0080ff;
+        z-index: 2;
+    }
+
+    select {
+        font-family: $RobotoRegular;
+        z-index: 1;
+        width: 100%;
+        border: 1px solid #d2d2d2;
+        border-radius: 3px;
+        outline: none;
+        color: #304460;
+        font-size: 16px;
+        padding: 8px 30px 6px 10px;
+        appearance: none;
+        -ms-appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+
+        option {
+            color: #304460;
+            background: none;
+            border: none;
+
+        }
+
+        &:focus {
+            @include box-shadow(none);
+            border: solid 1px #0080ff;
+        }
+    }
+}
+
+.cus-select2 {
+    .label {
+        @include fw-normal;
+        font-size: 14px;
+        color: #666b77;
+    }
+
+    .form-control {
+        height: 40px;
+    }
+
+    .select2 {
+        width: 100% !important;
+
+        .select2-selection {
+            @include flexbox;
+            @include align-items(center);
+            padding-right: 25px !important;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "\f107";
+                font-size: 11px;
+                color: #0080ff;
+                right: 10px;
+                font-family: 'Line Awesome Free';
+                font-weight: 900;
+            }
+        }
+
+        .select2-selection__rendered {
+            display: -webkit-box !important;
+            /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box !important;
+            /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox !important;
+            /* TWEENER - IE 10 */
+            display: -webkit-flex !important;
+            /* NEW - Chrome */
+            display: flex !important;
+            @include align-items(center);
+            @include fw-normal;
+            font-size: 16px;
+            height: 100% !important;
+            color: #304460 !important;
+        }
+
+        .select2-selection {
+            border: solid 1px #d2d2d2;
+            border-radius: 3px;
+            outline: none;
+
+            &:focus {
+                outline: none;
+                border: solid 1px #0080ff !important;
+            }
+        }
+
+        .select2-selection__arrow {
+            display: none;
+        }
+
+        .select2-selection--single {
+            min-height: 40px;
+        }
+
+    }
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+    display: none;
+}
+
+.select2-dropdown {
+    border: none;
+}
+
+.select2-results {
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.select2-results__options {
+    @include fw-normal;
+    font-size: 16px;
+    color: #304460;
+    background-color: #ffffff;
+    padding: 6px 8px;
+
+}
+
+.select2-results__options[aria-selected] {
+    background-color: #ffffff;
+    color: #0080ff;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    color: #0080ff;
+    background-color: #ffffff !important;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+    color: #0080ff;
+    background-color: #ffffff !important;
+}

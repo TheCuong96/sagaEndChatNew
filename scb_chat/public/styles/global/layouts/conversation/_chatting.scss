@@ -1,0 +1,206 @@
+.conversation {
+    .client {
+        @include flexbox;
+        margin-top: 10px;
+        width: 100%;
+        font-size: 14px;
+      
+        &__name_on-group {
+            font-weight: bold;
+            font-size: 15px;
+            color: black;
+            display: block;
+            font-style: normal;
+            margin-bottom: 4px;
+        }
+        &__left {
+            .client__mess--item {
+                align-items: flex-start;
+            }
+            .client__avatar {
+                margin-right: 15px;
+            }
+            .client__text {
+                white-space: pre-wrap;
+                word-break: break-word;
+                background-color: #ffffff;
+            }
+        }
+        &__right {
+            @include justify-content(flex-end);
+            .client__mess--item {
+                align-items: flex-end;
+            }
+            .client__avatar {
+                order: 2;
+                margin-left: 15px;
+            }
+            .client__text {
+                white-space: pre-wrap;
+                word-break: break-word;
+                background-color: #dbefc1;
+            }
+            .client__name_on-group {
+                text-align: right;
+            }
+            .client__upload-files {
+                text-align: left;
+            }
+        }
+        &__avatar {
+            @include flex_center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
+        }
+        &__messages {
+            @include flexbox;
+            @include flex-direction(column);
+            @include flex(1);
+            max-width: 390px;
+        }
+        &__mess--item {
+            @include flexbox;
+            @include flex-direction(column);
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        &__text {
+            display: inline-block;
+            border-radius: 3px;
+
+            color: #242b31;
+            padding: 7px 10px;
+            line-height: normal;
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+        &__time {
+            @include flexbox;
+            font-size: 12px;
+            color: #707070;
+            font-style: italic;
+            margin-top: -3px;
+            line-height: normal;
+            align-items: center;
+            text-transform: uppercase;
+            img{
+                width: 14px;
+                margin-right: 2px;
+            }
+            .error{
+                text-transform: capitalize;
+                color: #ff3d3d;
+            }
+        }
+        &__upload-images {
+            // margin-top: 10px;
+            margin-bottom: 7px;
+        }
+        &__upload-files {
+            margin-top: 4px;
+            display: inline;
+            .name {
+                color: #2fa2db;
+                margin-left: 10px;
+                text-decoration: underline;
+            }
+            img {
+                max-width: 15px;
+            }
+        }
+        &__upload-video {
+            margin-bottom: 8px;
+            position: relative;
+
+            .img {
+                width: 100%;
+            }
+            .size {
+                font-size: 12px;
+                @include fw-light;
+                color: #ffffff;
+                border-radius: 2px;
+                background-color: rgba(0, 0, 0, 0.4);
+                padding: 3px 7px;
+                position: absolute;
+                top: 8px;
+                left: 8px;
+            }
+            .loading {
+                width: 100%;
+                height: 100%;
+                background-color: rgba(33, 34, 39, 0.35);
+                z-index: 1;
+                position: absolute;
+                left: 0;
+                top: 0;
+                @include transition(all 0.3s ease);
+                &.inactive {
+                    background-color: transparent;
+                    z-index: -1;
+                }
+                &_icon {
+                    @include flex_center;
+                    @include transform(translate(-50%, -50%));
+                    width: 48px;
+                    height: 48px;
+                    background-color: rgba(0, 0, 0, 0.4);
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    font-size: 20px;
+                    color: #ffffff;
+                    position: relative;
+
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        width: 85%;
+                        height: 85%;
+                        @include flex_center;
+                        border-radius: 50%;
+                        animation: spin 0.7s linear 0s infinite;
+                        border: 2px solid #fff;
+                        border-top: 2px solid transparent;
+                    }
+                }
+                .icon {
+                    @include transform(translate(-50%, -50%));
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    z-index: 1;
+                }
+            }
+            .time {
+                @include fw-light;
+                @include flexbox;
+                @include align-items(center);
+                font-size: 14px;
+                color: #ffffff;
+                border-radius: 2px;
+                background-color: rgba(0, 0, 0, 0.4);
+                padding: 3px 7px;
+                position: absolute;
+                top: 8px;
+                left: 8px;
+                cursor: pointer;
+                &_icon {
+                    font-size: 13px;
+                    color: #ffffff;
+                    margin-left: 7px;
+                }
+            }
+        }
+        &__upload-image {
+            margin-bottom: 8px;
+        }
+    }
+}

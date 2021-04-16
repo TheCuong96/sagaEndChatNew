@@ -1,0 +1,48 @@
+//custom checkbox
+.card_user .list_camera .list_camera__item .image_avatar label.ant-checkbox-wrapper{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 4%;
+    right: 4%;
+    cursor: pointer;
+    border: solid 1px #bababa;
+    border-radius: 50%;
+    background-color: #ffffff;
+    .ant-checkbox{
+        width: 32px;
+        height: 30px;
+        border-radius: 50%;
+        .ant-checkbox-inner{
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            &::after{
+                left: 8px;
+                height: 16px;
+            }
+        }
+    }
+    .ant-checkbox.ant-checkbox-checked:focus{
+        border: none!important;
+    }
+    .ant-checkbox-checked .ant-checkbox-inner{
+        background-color: #ff3d3d;
+        border: 1px solid #ff3d3d;
+    }
+}

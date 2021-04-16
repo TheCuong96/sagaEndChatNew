@@ -1,0 +1,24 @@
+.ant-modal-body {
+    padding: 0;
+    margin: 0;
+    .modal-content {
+        @media (max-width: 767px) {
+            width: 100% !important;
+        }
+    }
+}
+.ant-modal-content {
+    width: 100%;
+    border-radius: 0;
+}
+.ant-modal-close-x {
+    width: auto;
+    height: auto;
+    line-height: normal;
+}
+.ant-modal-close {
+    display: none;
+}
+.ant-modal {
+    @include align-items(center);
+}

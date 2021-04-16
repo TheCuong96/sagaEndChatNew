@@ -1,0 +1,16 @@
+.rc_modal{
+    .ant-modal-footer{
+        display: none;
+    }
+    .ant-modal-close{
+        display: block;
+        top: 20px;
+        right: 15px;
+    }
+    &_closeicon {
+        i {
+            font-size: 18px;
+            color: #ff3f3f;
+        }
+    }
+}

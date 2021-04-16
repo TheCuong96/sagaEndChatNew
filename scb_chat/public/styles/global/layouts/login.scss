@@ -1,0 +1,202 @@
+.login {
+    @include flexbox;
+    @include flex-wrap(nowrap);
+    background-color: #ffffff;
+    height: 100vh;
+    @media (max-width: 992px) {
+        flex-direction: column;
+    }
+    &__bg {
+        width: 50%;
+        position: relative;
+        .logo {
+            margin: 30px 0 0 40px;
+        }
+        @media (max-width: 992px) {
+            width: 100%;
+            height: 35vh;
+        }
+        @media (max-width: 767px) {
+            text-align: center;
+            .logo {
+                position: absolute;
+                margin: auto;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+    &__right {
+        @include flex_center;
+        @include flex-direction(column);
+        width: 50%;
+        padding: 0 60px;
+        @media (max-width: 992px) {
+            width: 100%;
+            padding: 85px 80px;
+        }
+        @media (max-width: 481px) {
+            height: auto;
+            padding: 30px 40px;
+        }
+    }
+    &__form {
+        max-width: 518px;
+        width: 100%;
+        .mess-error {
+            margin-top: 5px;
+            display: none;
+            @media (max-width: 481px) {
+                font-size: 10px;
+            }
+        }
+        .title {
+            @include fw-medium;
+            text-align: center;
+            font-size: 40px;
+            line-height: 1.33;
+            color: #304460;
+            width: 100%;
+            margin-bottom: 60px;
+            @media (max-width: 992px) {
+                margin-bottom: 30px;
+                font-size: 25px;
+            }
+            @media (max-width: 767px) {
+                margin-bottom: 15px;
+            }
+            @media (max-width: 481px) {
+                margin-bottom: 10px;
+                font-size: 18px;
+            }
+        }
+        .label {
+            @include fw-bold;
+            font-size: 16px;
+            margin-bottom: 11px;
+            color: #304460;
+            @media (max-width: 992px) {
+                margin-bottom: 8px;
+                font-size: 14px;
+            }
+            @media (max-width: 767px) {
+                margin-bottom: 6px;
+            }
+            @media (max-width: 481px) {
+                font-size: 12px;
+            }
+        }
+        .form-group {
+            margin-bottom: 45px;
+            .form-control {
+                font-size: 18px;
+                height: 100%;
+                color: #304460;
+                padding: 12px;
+                @media (max-width: 992px) {
+                    font-size: 16px;
+                }
+                @media (max-width: 481px) {
+                    font-size: 14px;
+                }
+
+                @mixin placeholderInputStyles {
+                    @include fw-light;
+                    font-size: 18px;
+                    color: #8b8b8b;
+                    @media (max-width: 992px) {
+                        font-size: 16px;
+                    }
+                    @media (max-width: 481px) {
+                        font-size: 14px;
+                    }
+                }
+                &::-webkit-input-placeholder {
+                    /* Chrome/Opera/Safari */
+                    @include placeholderInputStyles;
+                }
+
+                &::-moz-placeholder {
+                    /* Firefox 19+ */
+                    @include placeholderInputStyles;
+                }
+
+                &:-ms-input-placeholder {
+                    /* IE 10+ */
+                    @include placeholderInputStyles;
+                }
+
+                &:-moz-placeholder {
+                    /* Firefox 18- */
+                    @include placeholderInputStyles;
+                }
+            }
+            .input-icon {
+                color: #717c99;
+            }
+            @media (max-width: 992px) {
+                margin-bottom: 25px;
+            }
+            @media (max-width: 767px) {
+                margin-bottom: 10px;
+            }
+        }
+        .forgot-password {
+            @include fw-normal;
+            text-align: right;
+            margin-bottom: 40px;
+            @media (max-width: 992px) {
+                margin-bottom: 25px;
+            }
+            @media (max-width: 767px) {
+                margin-bottom: 15px;
+                text-align: center;
+                font-size: 14px;
+            }
+            @media (max-width: 481px) {
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+        }
+        .btn {
+            max-height: 48px;
+            height: 100%;
+            width: 100%;
+            font-size: 18px;
+            border-radius: 3px;
+            border: none;
+            margin-top: 5px;
+            margin-bottom: 25px;
+            @media (max-width: 992px) {
+                margin-bottom: 15px;
+                font-size: 16px;
+            }
+            @media (max-width: 481px) {
+                margin-bottom: 10px;
+                font-size: 14px;
+            }
+        }
+        .support-login {
+            @include fw-normal;
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 9px;
+            color: #666b77;
+            @media (max-width: 992px) {
+                margin-bottom: 5px;
+                font-size: 14px;
+            }
+            @media (max-width: 481px) {
+                margin-bottom: unset;
+                font-size: 12px;
+            }
+
+            .text {
+                @include fw-medium;
+                color: #0080ff;
+            }
+        }
+    }
+}

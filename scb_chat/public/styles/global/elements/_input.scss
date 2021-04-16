@@ -1,0 +1,228 @@
+.form-group {
+    .form-control {
+        @include fw-normal;
+        font-size: 16px;
+        height: 40px;
+        box-shadow: none;
+        border-radius: 3px;
+        border: 1px solid #d2d2d2;
+
+        &:hover,
+        &:active {
+            border: 1px solid #0080ff;
+        }
+
+        &:disabled {
+            background-color: #f5f6f6;
+        }
+
+        @mixin placeholderInputStyles {
+            @include fw-light;
+            font-size: 16px;
+            color: #8b8b8b;
+        }
+
+        &::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            @include placeholderInputStyles;
+        }
+
+        &::-moz-placeholder {
+            /* Firefox 19+ */
+            @include placeholderInputStyles;
+        }
+
+        &:-ms-input-placeholder {
+            /* IE 10+ */
+            @include placeholderInputStyles;
+        }
+
+        &:-moz-placeholder {
+            /* Firefox 18- */
+            @include placeholderInputStyles;
+        }
+    }
+
+}
+
+.search {
+    @include flexbox;
+    @include align-items(center);
+    border: 1px solid #d2d2d2;
+    border-radius: 4px;
+    background-color: #ffffff;
+
+    &:hover,
+    &:active {
+        border: 1px solid #0080ff;
+    }
+
+    .form-control {
+        border: none;
+        padding: 0 7px;
+
+        &:hover,
+        &:active {
+            border: unset;
+        }
+
+        @mixin placeholderInputStyles {
+            @include fw-normal;
+            font-size: 16px;
+            color: #666b77;
+        }
+
+        &::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            @include placeholderInputStyles;
+        }
+
+        &::-moz-placeholder {
+            /* Firefox 19+ */
+            @include placeholderInputStyles;
+        }
+
+        &:-ms-input-placeholder {
+            /* IE 10+ */
+            @include placeholderInputStyles;
+        }
+
+        &:-moz-placeholder {
+            /* Firefox 18- */
+            @include placeholderInputStyles;
+        }
+    }
+
+    .input-group-prepend {
+        height: 40px;
+        width: 30px;
+    }
+
+    .input-group-text {
+        background-color: unset;
+        color: #0080ff;
+        cursor: pointer;
+        font-size: 18px;
+        border: none;
+    }
+
+}
+
+.reply {
+    @include flexbox;
+    @include align-items(center);
+    background-color: #f5f6f6;
+    border-radius: 3px;
+
+    .input-group-prepend {
+        height: 40px;
+    }
+
+    .input-group-text {
+        background-color: #0080ff;
+        color: #ffffff;
+        cursor: pointer;
+        font-size: 22px;
+        height: 40px;
+        border: none;
+        border-radius: 0px 3px 3px 0px;
+    }
+
+    .form-control {
+        border: none;
+        background-color: unset;
+
+        &:hover,
+        &:active {
+            border: none;
+        }
+
+        @mixin placeholderInputStyles {
+            @include fw-normal;
+            font-size: 16px;
+            color: #666b77;
+        }
+
+        &::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            @include placeholderInputStyles;
+        }
+
+        &::-moz-placeholder {
+            /* Firefox 19+ */
+            @include placeholderInputStyles;
+        }
+
+        &:-ms-input-placeholder {
+            /* IE 10+ */
+            @include placeholderInputStyles;
+        }
+
+        &:-moz-placeholder {
+            /* Firefox 18- */
+            @include placeholderInputStyles;
+        }
+    }
+
+    .input-icon {
+        cursor: pointer;
+        padding-right: 15px;
+    }
+}
+
+.password {
+    @include flexbox;
+    @include align-items(center);
+    border: 1px solid #d2d2d2;
+    border-radius: 3px;
+    background-color: #ffffff;
+
+    &:hover,
+    &:active {
+        border: 1px solid #0080ff;
+    }
+
+    .form-control {
+        box-shadow: none;
+        border: none;
+
+        &:hover,
+        &:active {
+            border: none;
+        }
+    }
+
+    .input-icon {
+        cursor: pointer;
+        padding-right: 10px;
+    }
+}
+
+.input-question {
+    @include flexbox;
+    @include align-items(center);
+    border: 1px solid #d2d2d2;
+    border-radius: 3px;
+    background-color: #ffffff;
+
+    &:hover,
+    &:active {
+        border: 1px solid #0080ff;
+    }
+
+    .form-control {
+        box-shadow: none;
+        border: none;
+
+        &:hover,
+        &:active {
+            border: none;
+        }
+    }
+
+    .input-icon {
+        cursor: pointer;
+        padding-right: 10px;
+        color: #8b8b8b !important;
+    }
+}

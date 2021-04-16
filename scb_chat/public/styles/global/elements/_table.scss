@@ -1,0 +1,92 @@
+.m-table {
+    background-color: #ffffff;
+    padding: 19px 24px;
+}
+
+.table-title {
+    @include flexbox;
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+    @include align-items(center);
+    @include fw-medium;
+    font-size: 18px;
+    color: #304460;
+    margin-bottom: 10px;
+
+}
+
+.cus-table {
+    @include scrollbarTable;
+    height: 500px;
+    overflow: auto;
+    margin-bottom: 15px;
+
+    @media (max-width: 991px) {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 900px;
+        width: 100%;
+    }
+
+    tr {
+        border-bottom: 1px solid #ececec;
+        height: 48px;
+    }
+
+    tbody tr {
+
+        &:hover,
+        &.active {
+            background-color: #f5f6f6;
+        }
+    }
+
+    th {
+        @include fw-medium;
+        color: #0057ae;
+        font-size: 16px;
+        padding: 7px 3px;
+    }
+
+    td {
+        @include fw-normal;
+        color: #666b77;
+        font-size: 16px;
+        padding: 3px;
+    }
+
+}
+
+.table-icon {
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.table-fixed {
+    background-color: #ffffff;
+    width: 100%;
+    height: auto;
+    overflow-x: none;
+
+    table {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+
+        tbody {
+            @include scrollbarTable;
+            display: block;
+            overflow: auto;
+            max-height: 535px;
+            height: 100%;
+            width: 100%;
+        }
+
+        tr {
+            display: table;
+            width: 100%;
+        }
+    }
+}

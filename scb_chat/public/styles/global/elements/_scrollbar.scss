@@ -1,0 +1,77 @@
+@mixin scrollbar {
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+
+    /*add a shadow to the scrollbar here*/
+    &::-webkit-scrollbar-track {
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    /*this is the little scrolly dealio in the bar*/
+    &::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        background: #dbdbdb;
+        // outline: 1px solid #dbdbdb;
+        height: 3px;
+    }
+
+    /*nobody needs this little scrollbar corner, I mean really, get rid of it haha*/
+    &::-webkit-scrollbar-corner {
+        display: none;
+        height: 0px;
+        width: 0px;
+    }
+}
+
+@mixin scrollbarSquare {
+    &::-webkit-scrollbar {
+        width: 7px;
+        height: 7px;
+    }
+
+    /*this is the little scrolly dealio in the bar*/
+    &::-webkit-scrollbar-thumb {
+        background: rgb(112, 112, 112);
+        height: 3px;
+    }
+    /*nobody needs this little scrollbar corner, I mean really, get rid of it haha*/
+    &::-webkit-scrollbar-corner {
+        display: none;
+        height: 0px;
+        width: 0px;
+    }
+}
+
+@mixin scrollbarTable {
+    /*change the thinkness of the scrollbar here*/
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+
+    /*add a shadow to the scrollbar here*/
+    &::-webkit-scrollbar-track {
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    /*this is the little scrolly dealio in the bar*/
+    &::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        background: #d2d2d2;
+        // outline: 1px solid #dbdbdb;
+        height: 3px;
+    }
+
+    /*nobody needs this little scrollbar corner, I mean really, get rid of it haha*/
+    &::-webkit-scrollbar-corner {
+        display: none;
+        height: 0px;
+        width: 0px;
+    }
+}

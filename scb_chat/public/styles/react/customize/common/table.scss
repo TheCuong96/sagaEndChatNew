@@ -1,0 +1,16 @@
+.rc_table{
+    .ant-table-thead > tr > th{
+        font-weight: 500;
+        font-family: "Roboto-Medium", arial;
+        color: #0057ae;
+        font-size: 16px;
+        padding: 7px 16px;
+        background-color: #fff;
+    }
+    td{
+        font-weight: normal;
+        font-family: "Roboto-Regular", arial;
+        color: #666b77;
+        font-size: 16px;
+    }
+}

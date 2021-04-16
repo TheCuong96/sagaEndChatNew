@@ -1,0 +1,91 @@
+.profile__avatar {
+    @include flexbox;
+    @include flex-direction(column);
+    @include align-items(center);
+    // margin-bottom: 15px;
+    position: relative;
+
+    .picture {
+        position: relative;
+        width: 63%;
+        max-width: 220px;
+        margin-bottom: 17px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        @media(max-width:525px) {
+            max-width: 220px;
+            width: 100%;
+        }
+
+        &::before {
+            display: block;
+            padding-top: 100%;
+            content: '';
+        }
+
+        .change_pic {
+            @include transform(translateX(-50%));
+            @include flexbox;
+            @include justify-content(center);
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            left: 50%;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.4);
+
+            input {
+                cursor: pointer;
+            }
+
+            .change_avatar {
+                position: absolute;
+                cursor: pointer;
+                width: 70%;
+                height: 40px;
+                z-index: 2;
+                opacity: 0;
+                bottom: 0px;
+            }
+
+            i {
+                font-size: 20px;
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .img-camera {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+        }
+
+        .icon-upload {
+            color: #fff;
+            font-size: 18px;
+        }
+    }
+
+    .name {
+        @include flexbox;
+        @include fw-medium;
+        @include flex-direction(column);
+        @include align-items(center);
+        color: #f4a239;
+        font-size: 22px;
+        width: 100%;
+
+        span {
+            @include fw-normal;
+            font-size: 16px;
+            color: #8b8b8b;
+        }
+    }
+
+
+}

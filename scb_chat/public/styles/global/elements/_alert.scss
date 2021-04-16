@@ -1,0 +1,61 @@
+.cus-alert {
+
+    .alert {
+        @include fw-normal;
+        @include flexbox;
+        @include align-items(center);
+        border-radius: 3px;
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #ffffff;
+        max-width: 250px;
+        width: 100%;
+        height: 56px;
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+        ;
+
+        &__icon {
+            padding-right: 11px;
+        }
+
+        &__img {
+            max-width: 33px;
+            width: 100%;
+            max-height: 33px;
+            height: 33px;
+        }
+
+        &-primary {
+            border: 1px solid rgba(0, 128, 255, 0.45);
+            color: #0080ff;
+        }
+
+        &-success {
+            border: solid 1px rgba(24, 210, 107, 0.45);
+            color: #18d26b;
+        }
+
+        &-danger {
+            border: solid 1px rgba(255, 63, 63, 0.45);
+            color: #f86d70;
+        }
+
+        &-warning {
+            border: solid 1px rgba(255, 193, 74, 0.45);
+            color: #ffc14a;
+        }
+
+    }
+
+    .card-nodata-alert {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        background-color: #fff;
+        width: 100%;
+
+        img {
+            padding: 10% 20%;
+        }
+    }
+}

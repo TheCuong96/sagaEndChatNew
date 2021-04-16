@@ -1,0 +1,40 @@
+.datepicker table tr td,
+.datepicker table tr th {
+    width: 40px;
+    text-align: center;
+}
+
+.cus-date-picker {
+
+    position: relative;
+
+    &::before {
+        @include transform(translateY(-50%));
+        font-size: 16px;
+        right: 14px;
+        position: absolute;
+        content: "\f073";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 400;
+        color: #ffffff;
+        top: 50%;
+        z-index: 0;
+        cursor: pointer;
+
+        @media(max-width:991px) {
+            font-size: 12px;
+        }
+    }
+
+    .form-control {
+        background-color: #0080ff;
+        color: #ffffff;
+
+        &:focus {
+            box-shadow: none;
+
+        }
+
+
+    }
+}

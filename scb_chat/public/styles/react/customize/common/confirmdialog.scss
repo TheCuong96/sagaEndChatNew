@@ -1,0 +1,102 @@
+.rc_confirmdialog {
+    position: relative;
+    background-color: #ffffff;
+    width: 400px;
+    border-radius: .3rem;
+    &_body{
+        text-align: center;
+        display: unset;
+    }
+    &_closeicon {
+        position: absolute;
+        width: 17.7px;
+        height: 17.7px;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        i {
+            font-size: 20px;
+            color: #000000;
+        }
+    }
+    &_header {
+        position: relative;
+        border-bottom-color: rgba(255, 255, 255, 0.1);
+        border-radius: 0;
+        padding: 20px 15px 15px;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.11);
+        background-color: #242731;
+        &_title {
+            font-size: 20px;
+            min-height: 24px;
+            font-weight: 500;
+            line-height: 1.2;
+            color: #000000;
+            margin-bottom: 0;
+            text-transform: uppercase;
+        }
+    }
+    &_content {
+        border-width: 0;
+        color: #000000;
+        padding: 16px 60px 12px 60px;
+        text-align: center;
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 1.24;
+    }
+    &_buttonwrap {
+        display: flex;
+        justify-content: center;
+        padding: 20px 15px 30px;
+        .rc_button {
+            &:first-of-type {
+                margin-right: 20px;
+            }
+        }
+    }
+    .modal-img{
+        padding: 1rem;
+        img{
+            vertical-align: middle;
+            border-style: none;
+            max-width: 132px;
+            width: 100%;
+            max-height: 132px;
+            height: 100%;
+        }
+    }
+}
+
+.react-confirm-alert {
+    &-overlay {
+        background: rgba(0, 0, 0, 0.3);
+    }
+}
+.react-confirm-alert-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.react-confirm-alert-overlay {
+    background: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-animation: react-confirm-alert-fadeIn .5s .2s forwards;
+    -moz-animation: react-confirm-alert-fadeIn .5s .2s forwards;
+    -o-animation: react-confirm-alert-fadeIn .5s .2s forwards;
+    animation: react-confirm-alert-fadeIn .5s .2s forwards;
+}
